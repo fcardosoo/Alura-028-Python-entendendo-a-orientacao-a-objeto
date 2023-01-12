@@ -25,3 +25,11 @@ print('*-'*20)
 
 conta.set__limite(5000)
 print(conta.get_limite())
+
+print('*-'*20)
+
+from cliente import Cliente
+
+cliente = Cliente('fabiano')
+
+print(cliente.get_nome())
