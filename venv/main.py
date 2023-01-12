@@ -10,3 +10,8 @@ print('*'*10)
 
 conta.deposita(10)
 conta2.deposita(10)
+
+print('*'*10)
+
+conta.saca(30)
+conta2.saca(20)

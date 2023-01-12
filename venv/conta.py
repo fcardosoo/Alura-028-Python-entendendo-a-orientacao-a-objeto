@@ -11,8 +11,8 @@ class Conta:
 
     def deposita(self, valor):
         self.saldo += valor
-        print('Novo saldo de {} do titular {}'.format(self.saldo, self.titular))
+        print('Deposito de {} - Novo saldo de {} do titular {}'.format(valor, self.saldo, self.titular))
 
     def saca(self, valor):
         self.saldo -= valor
-        print('Novo saldo de {} do titular {}'.format(self.saldo, self.titular))
+        print('Saque de {} - Novo saldo de {} do titular {}'.format(valor, self.saldo, self.titular))
