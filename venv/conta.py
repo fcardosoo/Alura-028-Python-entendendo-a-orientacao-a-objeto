@@ -20,4 +20,16 @@ class Conta:
     def transfere(self, valor, destino):
         self.saca(valor)
         destino.deposita(valor)
-        print('Transferência de {} realizada com sucesso da conta {} para a conta {}'.format (valor, origem, destino))
+        print('Transferência de {} realizada com sucesso da conta {} para a conta {}'.format (valor, self.__numero, destino))
+
+    def get_saldo(self):
+        return self.__saldo
+
+    def get_titular(self):
+        return self.__titular
+
+    def get_limite(self):
+        return self.__limite
+
+    def set__limite(self, limite):
+        self.__limite = limite

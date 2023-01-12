@@ -16,7 +16,11 @@ conta2.saca(20)
 
 print('*'*20)
 
-conta2.transfere(15, conta2, conta)
+conta2.transfere(15, conta)
 
 conta.extrato()
 conta2.extrato()
+
+print('*-'*20)
+
+conta.get_limite()
