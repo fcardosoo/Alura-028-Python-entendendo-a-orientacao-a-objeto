@@ -23,4 +23,5 @@ conta2.extrato()
 
 print('*-'*20)
 
-conta.get_limite()
+conta.set__limite(5000)
+print(conta.get_limite())
