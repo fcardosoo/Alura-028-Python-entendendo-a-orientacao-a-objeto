@@ -16,3 +16,8 @@ class Conta:
     def saca(self, valor):
         self.__saldo -= valor
         print('Saque de {} - Novo saldo de {} do titular {}'.format(valor, self.__saldo, self.__titular))
+
+    def transfere(self, valor, destino):
+        self.saca(valor)
+        destino.deposita(valor)
+        print('Transferência de {} realizada com sucesso da conta {} para a conta {}'.format (valor, origem, destino))
