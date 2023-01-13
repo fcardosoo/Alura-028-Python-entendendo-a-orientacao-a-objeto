@@ -13,12 +13,12 @@ class Conta:
         self.__saldo += valor
         print('Deposito de R${} | Novo saldo de R${} do titular {}'.format(valor, self.__saldo, self.__titular))
 
-    def pode_sacar(self, valor_a_sacar):
+    def __pode_sacar(self, valor_a_sacar):
         valor_disponivel_a_sacar = self.__saldo + self.__limite
         return valor_a_sacar <= valor_disponivel_a_sacar
 
     def saca(self, valor):
-        if(self.pode_sacar(valor)):
+        if(self.__pode_sacar(valor)):
             self.__saldo -= valor
             print('Saque de R${} | Novo saldo de R${} do titular {}'.format(valor, self.__saldo, self.__titular))
         else:
@@ -44,3 +44,7 @@ class Conta:
     @limite.setter
     def limite(self, limite):
         self.__limite = limite
+
+    @staticmethod
+    def codigo_banco():
+        return '001'
