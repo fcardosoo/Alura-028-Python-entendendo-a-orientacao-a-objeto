@@ -23,8 +23,8 @@ conta2.extrato()
 
 print('*-'*20)
 
-conta.set__limite(5000)
-print(conta.get_limite())
+# conta.set__limite(5000)
+# print(conta.get_limite())
 
 print('*-'*20)
 
@@ -32,4 +32,15 @@ from cliente import Cliente
 
 cliente = Cliente('fabiano')
 
-print(cliente.get_nome())
+print(cliente.nome)
+
+cliente.nome = 'fabiano oliveira'
+print('*~'*20)
+print(cliente.nome)
+
+print('~~-'*10)
+print(conta.limite)
+
+print('~~-'*10)
+conta.limite = 2000.0
+print(conta.limite)

@@ -22,14 +22,18 @@ class Conta:
         destino.deposita(valor)
         print('Transferência de {} realizada com sucesso da conta {} para a conta {}'.format (valor, self.__numero, destino))
 
-    def get_saldo(self):
+    @property
+    def saldo(self):
         return self.__saldo
 
-    def get_titular(self):
+    @property
+    def titular(self):
         return self.__titular
 
-    def get_limite(self):
+    @property
+    def limite(self):
         return self.__limite
 
-    def set__limite(self, limite):
+    @limite.setter
+    def limite(self, limite):
         self.__limite = limite
