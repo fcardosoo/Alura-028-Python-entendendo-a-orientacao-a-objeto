@@ -11,16 +11,23 @@ class Conta:
 
     def deposita(self, valor):
         self.__saldo += valor
-        print('Deposito de {} - Novo saldo de {} do titular {}'.format(valor, self.__saldo, self.__titular))
+        print('Deposito de R${} | Novo saldo de R${} do titular {}'.format(valor, self.__saldo, self.__titular))
+
+    def pode_sacar(self, valor_a_sacar):
+        valor_disponivel_a_sacar = self.__saldo + self.__limite
+        return valor_a_sacar <= valor_disponivel_a_sacar
 
     def saca(self, valor):
-        self.__saldo -= valor
-        print('Saque de {} - Novo saldo de {} do titular {}'.format(valor, self.__saldo, self.__titular))
+        if(self.pode_sacar(valor)):
+            self.__saldo -= valor
+            print('Saque de R${} | Novo saldo de R${} do titular {}'.format(valor, self.__saldo, self.__titular))
+        else:
+            print('Você não posssui saldo suficiente para esta operação! Valor disponível para saque é R${}'.format(self.__saldo+self.__limite))
 
     def transfere(self, valor, destino):
         self.saca(valor)
         destino.deposita(valor)
-        print('Transferência de {} realizada com sucesso da conta {} para a conta {}'.format (valor, self.__numero, destino))
+        print('Transferência de R${} realizada com sucesso da conta {} para a conta {}'.format (valor, self.__numero, destino))
 
     @property
     def saldo(self):
