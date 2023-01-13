@@ -46,5 +46,5 @@ class Conta:
         self.__limite = limite
 
     @staticmethod
-    def codigo_banco():
-        return '001'
+    def codigos_bancos():
+        return {'BB': '001', 'CEF': '104', 'Bradesco': '237'}

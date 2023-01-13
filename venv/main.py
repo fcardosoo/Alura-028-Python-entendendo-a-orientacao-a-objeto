@@ -7,4 +7,6 @@ conta2 = Conta(321, 'Marco', 100.0, 1000.0)
 conta.saca(100)
 
 
-print(Conta.codigo_banco())
+codigos = Conta.codigos_bancos()
+
+print(codigos['BB'])
